@@ -1,0 +1,16 @@
+<!-- <ng-container *ngFor="let user of users.usernames$ | async"> f </ng-container> -->
+
+<div
+  class="swatch"
+  *ngFor="let c of predefinedColors"
+  [ngStyle]="{ 'background-color': c }"
+></div>
+
+<div class="users">
+  <app-avatar
+    *ngFor="let user of avatarUsers$ | async"
+    [initials]="user.initials"
+    [colour]="user.colour"
+    [name]="user.name"
+  ></app-avatar>
+</div>
